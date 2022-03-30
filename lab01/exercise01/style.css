@@ -5,7 +5,33 @@ body * {
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
 /*
 Add some style blocks below this line to style the card.
 */
+h2 {
+    font: bold;
+}
+
+#card-view {
+    border: dotted 1px #CCC; 
+    width: 40vh;
+    height: 60vh;   
+}
+
+h2 {
+    margin-left: 2vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font: large;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+button {
+    margin-left: 2vh;
+}
