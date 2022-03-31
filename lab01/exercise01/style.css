@@ -14,12 +14,12 @@ h2 {
 
 #card-view {
     border: dotted 1px #CCC; 
-    width: 40vh;
-    height: 60vh;   
+    width: 350px;
+    height: 450px;   
 }
 
 h2 {
-    margin-left: 2vh;
+    margin-left: 2ch;
 }
 
 img {
@@ -28,10 +28,10 @@ img {
 
 p {
     font: large;
-    margin-left: 2vh;
-    margin-right: 2vh;
+    margin-left: 2ch;
+    margin-right: 2ch;
 }
 
 button {
-    margin-left: 2vh;
+    margin-left: 2ch;
 }
