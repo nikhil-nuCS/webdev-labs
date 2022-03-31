@@ -10,15 +10,55 @@ body {
 Add some style blocks below this line to style the cards.
 Feel free to borrow from Exercise 1.
 */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h2 {
+    font-family: IBM Plex Sans;
+    font: bold;
+}
+
+#card-view {
+    border: dotted 1px #CCC; 
+    width: 35vh;
+    height: 56vh;   
+}
+
+h2 {
+    margin-left: 2vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font: large;
+    font-family: Cabin;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+button {
+    margin-left: 2vh;
+}
 
 
 /* Tablet Media Query */
 @media only screen and (max-width: 1000px) {
-
+    #card-view {
+        margin-top: 2vh;
+        height: 57%;   
+    }
 }
 
 /* Mobile Phone Media Query */
 @media only screen and (max-width: 600px) {
-
-    
+    #card-view {
+        margin-top: 2vh;
+        height: 57%;   
+    }
 }
