@@ -11,9 +11,9 @@ Add some style blocks below this line to style the cards.
 Feel free to borrow from Exercise 1.
 */
 main {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    gap: 10px;
 }
 
 h2 {
@@ -23,8 +23,8 @@ h2 {
 
 #card-view {
     border: dotted 1px #CCC; 
-    width: 35vh;
-    height: 56vh;   
+    width: 300px;
+    height: 55%;   
 }
 
 h2 {
@@ -44,6 +44,7 @@ p {
 
 button {
     margin-left: 2vh;
+    margin-bottom: 2vh;
 }
 
 
