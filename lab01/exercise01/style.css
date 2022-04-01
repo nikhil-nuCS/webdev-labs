@@ -14,7 +14,7 @@ h2 {
 
 #card-view {
     border: dotted 1px #CCC; 
-    width: 350px;
+    width: calc(25% - 10px);
     height: 450px;   
 }
 
