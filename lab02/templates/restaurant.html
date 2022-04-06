@@ -11,11 +11,28 @@
     {% include 'includes/header.html' %}
 
     <main>
-        <p>Search location: {{location}}</p>
+        <!-- <p>Data: {{ restaurant }}</p> -->
+
+        <div id = "restaurant-box">
+            <img id = "boxR-image" src = {{ restaurant.get("image_url") }}>
+            <label id = "boxR-title">{{ restaurant.get("name") }}</label>
+
+            <label id = "boxR-address"> {{ restaurant.get("display_address") }} </label>
+            {% if 'price' in restaurant %}
+                <label id = "boxR-price">Price: {{ restaurant.get("price") }}</label>
+            {% else %}
+                <label id = "boxR-price">Price: Not available</labeL>
+            {% endif %}
+            <!-- <labeL> Price : </labeL> -->
+            <label id = "boxR-ratings"> Ratings : {{restaurant.get("rating")}}</label>
+            <label id = "boxR-reviews"> #Review Counts : {{restaurant.get("review_count")}}</label>
+
+        </div>
+        <!-- <p>Search location: {{location}}</p>
         <p>Search term: {{search_term or 'None Specified'}}</p>
         <p>Data: {{ restaurant }}</p>
         <h2>Top Restaurant:</h2> 
-        <p>Name: {{ restaurant.get('name') }}</p>
+        <p>Name: {{ restaurant.get('name') }}</p> -->
     </main>
 </body>
 </html>

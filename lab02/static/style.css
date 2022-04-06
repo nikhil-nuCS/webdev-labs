@@ -35,3 +35,53 @@ main {
 @media only screen and (max-width: 600px) {
     /* Media queries go here */
 }
+
+main #restaurant-box {
+    display: flex;
+    flex-direction: column;
+    border : 3px solid gray;
+    border-radius: 20px;
+    width: 300px;
+    padding-bottom: 10px;
+}
+main #restaurant-box #boxR-title {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+}
+main #restaurant-box #boxR-image {
+    border-radius: 17px 17px 0px 0px;
+    object-fit: fill;
+    /* height: 200px; */
+    /* width: fit-content;
+    height: 200px; */
+}
+
+main #restaurant-box #boxR-address {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10pt;
+}
+
+main #restaurant-box #boxR-price {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10pt;
+}
+
+main #restaurant-box #boxR-ratings {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10pt;
+}
+
+main #restaurant-box #boxR-reviews {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10pt;
+}
