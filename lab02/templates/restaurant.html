@@ -18,11 +18,12 @@
             <label id = "boxR-title">{{ restaurant.get("name") }}</label>
 
             <label id = "boxR-address"> {{ restaurant.get("display_address") }} </label>
-            {% if 'price' in restaurant %}
+            <label id = "boxR-price">Price: {{ restaurant.get("price") }}</label>
+            <!-- {% if 'price' in restaurant %}
                 <label id = "boxR-price">Price: {{ restaurant.get("price") }}</label>
             {% else %}
                 <label id = "boxR-price">Price: Not available</labeL>
-            {% endif %}
+            {% endif %} -->
             <!-- <labeL> Price : </labeL> -->
             <label id = "boxR-ratings"> Ratings : {{restaurant.get("rating")}}</label>
             <label id = "boxR-reviews"> #Review Counts : {{restaurant.get("review_count")}}</label>
