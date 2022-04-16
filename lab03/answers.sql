@@ -17,16 +17,16 @@ order by last_name
 
 
 -- Exercise 4
-SELECT id, user_id, image_url
+SELECT id, image_url, user_id
 FROM posts
 where user_id = 26
 
 
-
 -- Exercise 5
-SELECT id, user_id, image_url
+SELECT id, image_url, user_id
 FROM posts
 where user_id = 26 or user_id = 12
+
 
 
 -- Exercise 6
