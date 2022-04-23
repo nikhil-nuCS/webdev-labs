@@ -1,0 +1,13 @@
+GitHub repo: https://github.com/nikhil-nuCS/webdev-labs
+
+
+Q: What is the value of SQLAlchemy?
+Ans: SQLAlchemy is the Python SQL toolkit and Object Relational Mapper(classes can be mapped to databases) that helps in automatically loading tables from databases and automatically converts function calls to SQL statements performing CRUD operations.
+
+
+Q: What is a model?
+Ans: Models are a feature of SQLAlchemy.They are python classes which represent a SQL table in the database. The attributes of the model correspond to the columns in a table. It is a way to read and write in the database.
+
+
+Q: What is a view?
+Ans: Views are used to respond to requests. Flask uses patterns to match incoming URL request to the view that should be handling it. It helps in defining REST API endpoints.
