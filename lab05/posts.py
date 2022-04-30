@@ -17,7 +17,7 @@ class PostListEndpoint(Resource):
         # get posts created by one of these users:
         # print(get_authorized_user_ids(self.current_user))
         # print (posts)
-        limit = request.args.get('limit') or 20
+        limit = request.args.get("limit") or 20
         try:
             limit = int(limit)
             if limit > 50:
