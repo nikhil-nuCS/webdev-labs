@@ -26,7 +26,7 @@ class PostListEndpoint(Resource):
             return Response(json.dumps({"message": "Limit parameter invalid. It must be of type: int"}), mimetype="application/json",status=400)
 
         user_ids = get_authorized_user_ids(self.current_user)
-        posts = Post.query.filter(Post.user_id.in_(authorized_users)).limit(limit).all()
+        posts = Post.query.filter(Post.user_id.in_(user_ids)).limit(limit).all()
         data = [post.to_dict() for post in posts] 
         return Response(json.dumps(data), mimetype="application/json", status=200)
 
@@ -63,23 +63,21 @@ class PostDetailEndpoint(Resource):
         if not post:
             return Response(json.dumps({"message":  "id={0} is invalid".format(id)}), mimetype="application/json", status=404)
 
-        if post.user_id not in self.current_user.id:
+        if post.user_id != self.current_user.id:
             return Response(json.dumps({"message":  "id={0} is invalid".format(id)}), mimetype="application/json", status=404)
 
-        #set new values
-        if body.get('image_url'):
-            post.image_url = body.get('image_url')
-        if body.get('caption'):
-            post.caption = body.get('caption')
-        if body.get('alt_text'):
-            post.alt_text = body.get('alt_text')
+        if body.get("image_url"):
+            post.image_url = body.get("image_url")
+        if body.get("caption"):
+            post.caption = body.get("caption")
+        if body.get("alt_text"):
+            post.alt_text = body.get("alt_text")
 
         db.session.commit()
         return Response(json.dumps(post.to_dict()), mimetype="application/json", status=200)
 
 
     def delete(self, id):
-        # delete post where "id"=id
         post = Post.query.get(id)
         if not post:
             return Response(json.dumps({"message":  "id={0} is invalid".format(id)}), mimetype="application/json", status=404)
@@ -94,7 +92,6 @@ class PostDetailEndpoint(Resource):
 
 
     def get(self, id):
-        # get the post based on the id
         post = Post.query.get(id)
         if not post:
             return Response(json.dumps({"message":  "id={0} is invalid".format(id)}), mimetype="application/json", status=404)
