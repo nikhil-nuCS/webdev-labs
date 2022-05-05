@@ -14,9 +14,6 @@ class PostListEndpoint(Resource):
         self.current_user = current_user
 
     def get(self):
-        # get posts created by one of these users:
-        # print(get_authorized_user_ids(self.current_user))
-        # print (posts)
         limit = request.args.get("limit") or 20
         try:
             limit = int(limit)
@@ -32,9 +29,7 @@ class PostListEndpoint(Resource):
 
 
     def post(self):
-        # create a new post based on the data posted in the body 
         body = request.get_json()
-        # print(body)  
         
         if not body.get("image_url"):
             return Response(json.dumps({"message": "No image url found. Image url is required."}), mimetype="application/json", status=400)
@@ -57,7 +52,6 @@ class PostDetailEndpoint(Resource):
         
 
     def patch(self, id):
-        # update post based on the data posted in the body 
         body = request.get_json()
         post = Post.query.get(id)
         if not post:
