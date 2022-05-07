@@ -14,14 +14,3 @@ const changeDyslexiaMode = () => {
 };
 
 document.querySelector("#dyslexia-toggle").addEventListener('click', changeDyslexiaMode);
-
-
-
-// document.querySelector('#dyslexia-toggle').addEventListener('click', () => {
-//   if (document.querySelector('body').className != 'dyslexia-mode') {
-//     document.querySelector('body').className = 'dyslexia-mode';
-//   }
-//   else {
-//     document.querySelector('body').className = '';
-//   }
-// })
